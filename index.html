@@ -13,13 +13,43 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://perepechin.github.io/">
 
+  <script type="text/javascript">
+    (function () {
+        var didInit = false;
+
+        function initMunchkin() {
+            if (didInit === false) {
+                didInit = true;
+                Munchkin.init('725-SMC-563');
+            }
+        }
+
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function () {
+            if (this.readyState === 'complete' || this.readyState === 'loaded') {
+                initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+</script>
+
 </head>
 
 <body>
-  <p>Пакет «Диетология Эксперт»</p>
-  <script type="text/javascript" id="widget-wfp-script" src="https://secure.wayforpay.com/server/pay-widget.js?ref=button"></script> <script type="text/javascript">function runWfpWdgt(url){var wayforpay=new Wayforpay();wayforpay.invoice(url);}</script> <button type="button" onclick="runWfpWdgt('https://secure.wayforpay.com/button/b381d2a19f965');" style="display:inline-block!important;background:#0488cd;background-size:cover;width: 256px!important;height:54px!important;border:none!important;border-radius:14px!important;padding:18px!important;box-shadow:3px 2px 8px rgba(71,66,66,0.22)!important;text-align:center!important;outline:none!important;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"> <span style="font-family:Verdana,Arial,sans-serif!important;font-weight:bold!important;font-size:14px!important;color:#ffffff!important;line-height:18px!important;vertical-align:middle!important;">Оплатить</span></button>
-
-  <p>Пакет «Диетология для себя и семьи»</p>
-  <script type="text/javascript" id="widget-wfp-script" src="https://secure.wayforpay.com/server/pay-widget.js?ref=button"></script> <script type="text/javascript">function runWfpWdgt(url){var wayforpay=new Wayforpay();wayforpay.invoice(url);}</script> <button type="button" onclick="runWfpWdgt('https://secure.wayforpay.com/button/b71206698db64');" style="display:inline-block!important;background:#0488cd;background-size:cover;width: 256px!important;height:54px!important;border:none!important;border-radius:14px!important;padding:18px!important;box-shadow:3px 2px 8px rgba(71,66,66,0.22)!important;text-align:center!important;outline:none!important;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"> <span style="font-family:Verdana,Arial,sans-serif!important;font-weight:bold!important;font-size:14px!important;color:#ffffff!important;line-height:18px!important;vertical-align:middle!important;">Оплатить</span></button>
+  <form id="mktoForm_1012">
+  </form>
+  <script src="https://pages.secureworks.com/js/forms2/js/forms2.min.js"></script>
+  <script>
+    window.addEventListener("load", (e)=>{
+      MktoForms2.loadForm("//pages.secureworks.com", "725-SMC-563", 1012, (form) => {
+          console.log(form);
+      });
+    });
+  </script>
 </body>
 </html>

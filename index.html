@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,42 +11,7 @@
   <meta property="og:title" content="Sandbox">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://perepechin.github.io/">
-
-  <script type="text/javascript">
-    (function () {
-        var didInit = false;
-
-        function initMunchkin() {
-            if (didInit === false) {
-                didInit = true;
-                Munchkin.init('725-SMC-563');
-            }
-        }
-
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//munchkin.marketo.net/munchkin.js';
-        s.onreadystatechange = function () {
-            if (this.readyState === 'complete' || this.readyState === 'loaded') {
-                initMunchkin();
-            }
-        };
-        s.onload = initMunchkin;
-        document.getElementsByTagName('head')[0].appendChild(s);
-    })();
-  </script>
-  <script src="https://app-ab44.marketo.com/js/forms2/js/forms2.min.js"></script>
 </head>
-
 <body>
-  <form id="mktoForm_1012">
-  </form>
-  <script>
-    // MktoForms2.loadForm("https://app-ab44.marketo.com", "725-SMC-563", 1012, (form) => {
-    //       console.log('Form ID: ' + form.getId());
-    // });
-    MktoForms2.loadForm("https://app-ab44.marketo.com", "725-SMC-563", 1012);
-  </script>
 </body>
 </html>
